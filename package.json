@@ -8,7 +8,7 @@
         "preview": "vite preview"
     },
     "exports": {
-        "./*": {
+        ".": {
             "import": "./dist/hjb-ui.es.js",
             "require": "./dist/hjb-ui.umd.js"
         }
