@@ -627,7 +627,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   ]);
 }
 var ModalBase = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render]]);
-const _hoisted_1 = { class: "container mx-auto px-4 sm:px-6 lg:px-8" };
+const _hoisted_1 = { class: "mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl" };
 const _hoisted_2 = {
   key: 0,
   class: "max-w-3xl mx-auto"
