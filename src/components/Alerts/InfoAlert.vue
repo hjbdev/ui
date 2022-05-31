@@ -1,0 +1,41 @@
+<template>
+    <div class="rounded-md bg-blue-50 p-4">
+        <div class="flex">
+            <div class="flex-shrink-0">
+                <!-- Heroicon name: solid/information-circle -->
+                <svg
+                    class="h-5 w-5 text-blue-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                        clip-rule="evenodd"
+                    />
+                </svg>
+            </div>
+            <div class="ml-3 flex-1">
+                <h3
+                    v-if="$slots.title"
+                    class="text-sm font-medium text-blue-800"
+                    :class="{
+                        'mb-2': $slots.default,
+                    }"
+                >
+                    <slot name="title"></slot>
+                </h3>
+                <div class="md:flex md:justify-between">
+                    <p class="text-sm text-blue-700">
+                        <slot></slot>
+                    </p>
+                    <p v-if="$slots.action" class="mt-3 text-sm md:mt-0 md:ml-6">
+                        <slot name="action"></slot>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
