@@ -1,7 +1,21 @@
-# Vue 3 + Vite
+# hjbdev UI
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+It's basically Tailwind UI but in Vue components
 
-## Recommended IDE Setup
+## Tailwind
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+You'll need to define this in your Tailwind config.
+
+```js
+theme: {
+        extend: {
+            colors: ({ theme }) => ({
+                primary: {
+                    DEFAULT: colors.purple[500],
+                    ...colors.purple
+                }
+            })
+        },
+    },
+```
+
