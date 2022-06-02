@@ -3,11 +3,16 @@ defineProps({
     size: {
         type: String,
         default: "base"
+    },
+    as: {
+        type: [String, Object, Function],
+        default: 'button'
     }
 })
 </script>
 <template>
-    <button
+    <component
+        :is="as"
         type="button"
         :class="{
             'px-2.5 py-1.5 text-xs': size === 'xs',
@@ -19,5 +24,5 @@ defineProps({
         class="transition inline-flex items-center border border-gray-300 font-medium rounded-md shadow-sm text-gray-700 hover:bg-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
     >
         <slot></slot>
-    </button>
+    </component>
 </template>

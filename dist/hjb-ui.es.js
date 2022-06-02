@@ -5,7 +5,7 @@ const _sfc_main$g = {
   name: "AlertAction",
   props: {
     as: {
-      type: String,
+      type: [String, Object, Function],
       default: "a"
     }
   },
@@ -246,11 +246,15 @@ const _sfc_main$a = {
     size: {
       type: String,
       default: "base"
+    },
+    as: {
+      type: [String, Object, Function],
+      default: "button"
     }
   },
   setup(__props) {
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("button", {
+      return openBlock(), createBlock(resolveDynamicComponent(__props.as), {
         type: "button",
         class: normalizeClass([{
           "px-2.5 py-1.5 text-xs": __props.size === "xs",
@@ -259,9 +263,12 @@ const _sfc_main$a = {
           "px-4 py-2 text-base": __props.size === "lg",
           "px-6 py-3 text-base": __props.size === "xl"
         }, "transition inline-flex items-center border border-transparent font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"])
-      }, [
-        renderSlot(_ctx.$slots, "default")
-      ], 2);
+      }, {
+        default: withCtx(() => [
+          renderSlot(_ctx.$slots, "default")
+        ]),
+        _: 3
+      }, 8, ["class"]);
     };
   }
 };
@@ -271,11 +278,15 @@ const _sfc_main$9 = {
     size: {
       type: String,
       default: "base"
+    },
+    as: {
+      type: [String, Object, Function],
+      default: "button"
     }
   },
   setup(__props) {
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("button", {
+      return openBlock(), createBlock(resolveDynamicComponent(__props.as), {
         type: "button",
         class: normalizeClass([{
           "px-2.5 py-1.5 text-xs": __props.size === "xs",
@@ -284,9 +295,12 @@ const _sfc_main$9 = {
           "px-4 py-2 text-base": __props.size === "lg",
           "px-6 py-3 text-base": __props.size === "xl"
         }, "transition inline-flex items-center border border-transparent font-medium rounded-md shadow-sm text-primary-700 hover:bg-primary-300 bg-primary-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"])
-      }, [
-        renderSlot(_ctx.$slots, "default")
-      ], 2);
+      }, {
+        default: withCtx(() => [
+          renderSlot(_ctx.$slots, "default")
+        ]),
+        _: 3
+      }, 8, ["class"]);
     };
   }
 };
@@ -296,11 +310,15 @@ const _sfc_main$8 = {
     size: {
       type: String,
       default: "base"
+    },
+    as: {
+      type: [String, Object, Function],
+      default: "button"
     }
   },
   setup(__props) {
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("button", {
+      return openBlock(), createBlock(resolveDynamicComponent(__props.as), {
         type: "button",
         class: normalizeClass([{
           "px-2.5 py-1.5 text-xs": __props.size === "xs",
@@ -309,9 +327,12 @@ const _sfc_main$8 = {
           "px-4 py-2 text-base": __props.size === "lg",
           "px-6 py-3 text-base": __props.size === "xl"
         }, "transition inline-flex items-center border border-gray-300 font-medium rounded-md shadow-sm text-gray-700 hover:bg-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"])
-      }, [
-        renderSlot(_ctx.$slots, "default")
-      ], 2);
+      }, {
+        default: withCtx(() => [
+          renderSlot(_ctx.$slots, "default")
+        ]),
+        _: 3
+      }, 8, ["class"]);
     };
   }
 };

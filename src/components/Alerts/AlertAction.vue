@@ -1,7 +1,7 @@
 <script setup>
 defineProps({
     as: {
-        type: String,
+        type: [String, Object, Function],
         default: "a",
     },
 });
