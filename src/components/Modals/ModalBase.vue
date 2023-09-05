@@ -19,7 +19,7 @@
                     <div
                         v-if="$modals.all.length"
                         key="modalBackground"
-                        class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75"
+                        class="fixed inset-0 transition-opacity bg-zinc-500 bg-opacity-75"
                         aria-hidden="true"
                     ></div>
                 </Transition>
@@ -40,7 +40,7 @@
                         <div class="absolute top-0 right-0 hidden pt-4 pr-4 sm:block">
                             <button
                                 type="button"
-                                class="text-gray-400 bg-white rounded-md hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+                                class="text-zinc-400 bg-white rounded-md hover:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
                                 @click="$modals.pop()"
                             >
                                 <span class="sr-only">Close</span>

@@ -1,9 +1,6 @@
 <script setup>
 import Container from "./components/Container.vue";
 import Card from "./components/Cards/Card.vue";
-import CardGrid from "./components/Cards/CardGrid.vue";
-import List from "./components/Lists/List.vue";
-import ListItem from "./components/Lists/ListItem.vue";
 import Input from "./components/Inputs/Input.vue";
 import DangerAlert from "./components/Alerts/DangerAlert.vue";
 import InfoAlert from "./components/Alerts/InfoAlert.vue";
@@ -13,28 +10,37 @@ import AlertAction from "./components/Alerts/AlertAction.vue";
 import ModalBase from "./components/Modals/ModalBase.vue";
 import CardTitle from "./components/Cards/CardTitle.vue";
 import PrimaryButton from "./components/Buttons/PrimaryButton.vue";
-import ButtonGroup from "./components/Buttons/ButtonGroup.vue";
 import SecondaryButton from "./components/Buttons/SecondaryButton.vue";
-import FaintButton from "./components/Buttons/FaintButton.vue";
+import DangerButton from "./components/Buttons/DangerButton.vue";
+import SidebarLayout from "./components/Sidebar/SidebarLayout.vue";
+import Sidebar from "./components/Sidebar/Sidebar.vue";
+import SidebarItem from "./components/Sidebar/SidebarItem.vue";
+import HomeIcon from "./components/Icons/HomeIcon.vue";
+import SidebarLinkGroup from "./components/Sidebar/SidebarLinkGroup.vue";
+import SelectInput from "./components/Inputs/SelectInput.vue";
+import { ref } from "vue";
+
+const exampleSelectValue = ref(null);
 </script>
 <template>
-    <Container class="pt-6">
-        <CardGrid>
+    <SidebarLayout class="min-h-screen min-w-screen dark:bg-zinc-900">
+        <template #sidebar>
+            <Sidebar>
+                <SidebarLinkGroup>
+                    <SidebarItem :icon="HomeIcon"> Dashboard </SidebarItem>
+                </SidebarLinkGroup>
+            </Sidebar>
+        </template>
+
+        <Container class="pt-6 grid gap-6">
             <Card>
                 <template #header>
                     <CardTitle>This is a card</CardTitle>
                 </template>
-                Card content
-            </Card>
-            <Card>
-                <template #header>
-                    <CardTitle>Lists</CardTitle>
+                <template #extra>
+                    <SecondaryButton>Hello</SecondaryButton>
                 </template>
-                <List>
-                    <ListItem>Hello</ListItem>
-                    <ListItem>Hello</ListItem>
-                    <ListItem>Hello</ListItem>
-                </List>
+                Card content
             </Card>
             <Card>
                 <template #header>
@@ -45,15 +51,24 @@ import FaintButton from "./components/Buttons/FaintButton.vue";
                     label="Full Name"
                     id="full_name"
                     name="full_name"
-                    help-text="Do you even know your name?"
-                ></Input>
+                    help-text="Do you even know your name?"></Input>
                 <Input
                     type="email"
                     label="Email Address"
                     id="email"
                     name="email"
-                    error="You must enter an email address"
-                ></Input>
+                    error="You must enter an email address"></Input>
+                <SelectInput
+                    v-model="exampleSelectValue"
+                    label="Hello"
+                    :options="[{
+                        id: 'test',
+                        name: 'Test'
+                    }, {
+                        id: 'test2',
+                        name: 'Test2'
+                    }]"
+                />
             </Card>
             <Card>
                 <template #header>
@@ -71,7 +86,7 @@ import FaintButton from "./components/Buttons/FaintButton.vue";
                     >We've noticed something in your config isnt optimal
 
                     <template #action>
-                        <AlertAction href="#" class="text-blue-600 hover:text-blue-700">Fix</AlertAction>
+                        <AlertAction href="#" class="">Fix</AlertAction>
                     </template>
                 </InfoAlert>
                 <WarningAlert>Something went wrong</WarningAlert>
@@ -80,31 +95,26 @@ import FaintButton from "./components/Buttons/FaintButton.vue";
                 <template #header>
                     <CardTitle>Buttons</CardTitle>
                 </template>
-
-                <ButtonGroup>
-                    <PrimaryButton size="xs">xs button</PrimaryButton>
-                    <PrimaryButton size="sm">sm button</PrimaryButton>
+                <div>
+                    <PrimaryButton size="tiny">xs button</PrimaryButton>
+                    <PrimaryButton size="small">xs button</PrimaryButton>
                     <PrimaryButton>base button</PrimaryButton>
-                    <PrimaryButton size="lg">lg button</PrimaryButton>
-                    <PrimaryButton size="xl">xl button</PrimaryButton>
-                </ButtonGroup>
-                <ButtonGroup>
-                    <SecondaryButton size="xs">xs button</SecondaryButton>
-                    <SecondaryButton size="sm">sm button</SecondaryButton>
+                    <PrimaryButton size="large">lg button</PrimaryButton>
+                </div>
+                <div>
+                    <SecondaryButton size="tiny">xs button</SecondaryButton>
+                    <SecondaryButton size="small">sm button</SecondaryButton>
                     <SecondaryButton>base button</SecondaryButton>
-                    <SecondaryButton size="lg">lg button</SecondaryButton>
-                    <SecondaryButton size="xl">xl button</SecondaryButton>
-                </ButtonGroup>
-                <ButtonGroup>
-                    <FaintButton size="xs">xs button</FaintButton>
-                    <FaintButton size="sm">sm button</FaintButton>
-                    <FaintButton>base button</FaintButton>
-                    <FaintButton size="lg">lg button</FaintButton>
-                    <FaintButton size="xl">xl button</FaintButton>
-                </ButtonGroup>
+                    <SecondaryButton size="large">lg button</SecondaryButton>
+                </div>
+                <div>
+                    <DangerButton size="tiny">xs button</DangerButton>
+                    <DangerButton size="small">sm button</DangerButton>
+                    <DangerButton>base button</DangerButton>
+                    <DangerButton size="large">lg button</DangerButton>
+                </div>
             </Card>
-        </CardGrid>
-        <ModalBase></ModalBase>
-    </Container>
+            <ModalBase></ModalBase>
+        </Container>
+    </SidebarLayout>
 </template>
-<style></style>

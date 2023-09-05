@@ -1,20 +1,15 @@
 <script setup>
 defineProps({
-    narrow: {
-        type: Boolean,
-        default: false
-    }
-})
+    narrow: Boolean,
+});
 </script>
 <template>
-    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <template v-if="narrow">
-            <div class="max-w-3xl mx-auto">
-                <slot />
-            </div>
-        </template>
-        <template v-else>
-            <slot />
-        </template>
+    <div
+        class="mx-auto px-4 sm:px-6 lg:px-8"
+        :class="{
+            'max-w-7xl': !narrow,
+            'max-w-4xl': narrow,
+        }">
+        <slot />
     </div>
 </template>

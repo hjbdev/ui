@@ -1,5 +1,5 @@
 <template>
-    <div class="rounded-md bg-blue-50 p-4">
+    <div class="rounded-md bg-blue-50 dark:bg-blue-800 p-4">
         <div class="flex">
             <div class="flex-shrink-0">
                 <!-- Heroicon name: solid/information-circle -->
@@ -20,7 +20,7 @@
             <div class="ml-3 flex-1">
                 <h3
                     v-if="$slots.title"
-                    class="text-sm font-medium text-blue-800"
+                    class="text-sm font-medium text-blue-800 dark:text-blue-200"
                     :class="{
                         'mb-2': $slots.default,
                     }"
@@ -28,7 +28,7 @@
                     <slot name="title"></slot>
                 </h3>
                 <div class="md:flex md:justify-between">
-                    <p class="text-sm text-blue-700">
+                    <p class="text-sm text-blue-800 dark:text-blue-200">
                         <slot></slot>
                     </p>
                     <p v-if="$slots.action" class="mt-3 text-sm md:mt-0 md:ml-6">

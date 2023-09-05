@@ -1,28 +1,10 @@
 <script setup>
-defineProps({
-    size: {
-        type: String,
-        default: "base"
-    },
-    as: {
-        type: [String, Object, Function],
-        default: 'button'
-    }
-})
+import BaseButton from "./BaseButton.vue";
 </script>
 <template>
-    <component
-        :is="as"
-        type="button"
-        :class="{
-            'px-2.5 py-1.5 text-xs': size === 'xs',
-            'px-3 py-1.5 text-sm': size === 'sm',
-            'px-4 py-2 text-sm': size === 'base',
-            'px-4 py-2 text-base': size === 'lg',
-            'px-6 py-3 text-base': size === 'xl',
-        }"
-        class="transition inline-flex items-center border border-transparent font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+    <BaseButton
+        class="bg-zinc-800 dark:bg-zinc-200 text-white dark:text-zinc-800 hover:bg-zinc-700 dark:hover:bg-white focus:bg-zinc-700 dark:focus:bg-white active:bg-zinc-900 dark:active:bg-zinc-300 focus:ring-indigo-500 dark:focus:ring-offset-zinc-800 disabled:opacity-25"
     >
-        <slot></slot>
-    </component>
+        <slot />
+    </BaseButton>
 </template>
