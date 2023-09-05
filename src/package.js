@@ -15,6 +15,10 @@ export { default as CardTitle } from "./components/Cards/CardTitle.vue";
 export { default as Dropdown } from "./components/Cards/Dropdown.vue";
 export { default as DropdownLink } from "./components/Cards/DropdownLink.vue";
 
+export { default as HH1 } from "./components/Headings/HH1.vue";
+export { default as HH2 } from "./components/Headings/HH2.vue";
+export { default as HH3 } from "./components/Headings/HH3.vue";
+
 export { default as Input } from "./components/Inputs/Input.vue";
 export { default as InputLayout } from "./components/Inputs/InputLayout.vue";
 export { default as SelectInput } from "./components/Inputs/SelectInput.vue";

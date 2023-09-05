@@ -19,6 +19,9 @@ import HomeIcon from "./components/Icons/HomeIcon.vue";
 import SidebarItemGroup from "./components/Sidebar/SidebarItemGroup.vue";
 import SelectInput from "./components/Inputs/SelectInput.vue";
 import { ref } from "vue";
+import HH1 from "./components/Headings/HH1.vue";
+import HH2 from "./components/Headings/HH2.vue";
+import HH3 from "./components/Headings/HH3.vue";
 
 const exampleSelectValue = ref(null);
 </script>
@@ -90,6 +93,14 @@ const exampleSelectValue = ref(null);
                     </template>
                 </InfoAlert>
                 <WarningAlert>Something went wrong</WarningAlert>
+            </Card>
+            <Card>
+                <template #header>
+                    <CardTitle>Typography</CardTitle>
+                </template>
+                <HH1>Heading 1</HH1>
+                <HH2>Heading 2</HH2>
+                <HH3>Heading 3</HH3>
             </Card>
             <Card>
                 <template #header>
