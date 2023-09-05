@@ -16,7 +16,7 @@ import SidebarLayout from "./components/Sidebar/SidebarLayout.vue";
 import Sidebar from "./components/Sidebar/Sidebar.vue";
 import SidebarItem from "./components/Sidebar/SidebarItem.vue";
 import HomeIcon from "./components/Icons/HomeIcon.vue";
-import SidebarLinkGroup from "./components/Sidebar/SidebarLinkGroup.vue";
+import SidebarItemGroup from "./components/Sidebar/SidebarItemGroup.vue";
 import SelectInput from "./components/Inputs/SelectInput.vue";
 import { ref } from "vue";
 
@@ -26,9 +26,9 @@ const exampleSelectValue = ref(null);
     <SidebarLayout class="min-h-screen min-w-screen dark:bg-zinc-900">
         <template #sidebar>
             <Sidebar>
-                <SidebarLinkGroup>
+                <SidebarItemGroup>
                     <SidebarItem :icon="HomeIcon"> Dashboard </SidebarItem>
-                </SidebarLinkGroup>
+                </SidebarItemGroup>
             </Sidebar>
         </template>
 
