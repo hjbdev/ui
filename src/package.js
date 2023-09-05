@@ -12,8 +12,8 @@ export { default as BaseButton } from "./components/Buttons/BaseButton.vue";
 export { default as Card } from "./components/Cards/Card.vue";
 export { default as CardTitle } from "./components/Cards/CardTitle.vue";
 
-export { default as Dropdown } from "./components/Cards/Dropdown.vue";
-export { default as DropdownLink } from "./components/Cards/DropdownLink.vue";
+export { default as Dropdown } from "./components/Dropdown/Dropdown.vue";
+export { default as DropdownLink } from "./components/Dropdown/DropdownLink.vue";
 
 export { default as HH1 } from "./components/Headings/HH1.vue";
 export { default as HH2 } from "./components/Headings/HH2.vue";
@@ -30,6 +30,6 @@ export { default as SidebarItem } from "./components/Sidebar/SidebarItem.vue";
 export { default as SidebarLayout } from "./components/Sidebar/SidebarLayout.vue";
 export { default as SidebarItemGroup } from "./components/Sidebar/SidebarItemGroup.vue";
 
-export { default as FadeScaleTransition } from "./components/Transition/FadeScaleTransition.vue";
+export { default as FadeScaleTransition } from "./components/Transitions/FadeScaleTransition.vue";
 
 export { default as Container } from "./components/Container.vue";
