@@ -22,6 +22,13 @@ import { ref } from "vue";
 import HH1 from "./components/Headings/HH1.vue";
 import HH2 from "./components/Headings/HH2.vue";
 import HH3 from "./components/Headings/HH3.vue";
+import Dialogs from "./components/Dialogs/Dialogs.vue";
+import { info as infoDialog, confirm as confirmDialog } from "./support/Dialogs";
+
+async function testConfirmDialog() {
+    const result = await confirmDialog('Info', 'Are you sure');
+    console.log('confirm dialog result', result);
+}
 
 const exampleSelectValue = ref(null);
 </script>
@@ -34,6 +41,8 @@ const exampleSelectValue = ref(null);
                 </SidebarItemGroup>
             </Sidebar>
         </template>
+
+        <Dialogs />
 
         <Container class="pt-6 grid gap-6">
             <Card>
@@ -123,6 +132,15 @@ const exampleSelectValue = ref(null);
                     <DangerButton size="small">sm button</DangerButton>
                     <DangerButton>base button</DangerButton>
                     <DangerButton size="large">lg button</DangerButton>
+                </div>
+            </Card>
+            <Card>
+                <template #header>
+                    <CardTitle>Dialogs</CardTitle>
+                </template>
+                <div>
+                    <PrimaryButton @click="infoDialog('Info', 'this is a subtitle')">Regular Dialog</PrimaryButton>
+                    <PrimaryButton @click="testConfirmDialog">Confirmation Dialog</PrimaryButton>
                 </div>
             </Card>
             <ModalBase></ModalBase>

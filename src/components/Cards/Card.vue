@@ -1,6 +1,10 @@
 <script setup>
 defineProps({
     flush: Boolean,
+    footerJustify: {
+        type: String,
+        default: "start",
+    },
 });
 </script>
 <template>
@@ -18,5 +22,11 @@ defineProps({
             </div>
         </div>
         <slot />
+        <div v-if="$slots.footer" class="mt-6 flex gap-2" :class="{
+            'justify-end': footerJustify === 'end',
+            'justify-between': footerJustify === 'between',
+        }">
+            <slot name="footer" />
+        </div>
     </div>
 </template>
