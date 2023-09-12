@@ -1,6 +1,5 @@
 {
     "name": "@hjbdev/ui",
-    "private": true,
     "version": "0.0.1",
     "scripts": {
         "dev": "bunx --bun vite",
