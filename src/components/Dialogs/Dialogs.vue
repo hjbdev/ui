@@ -26,7 +26,6 @@
     </FadeScaleTransition>
 </template>
 <script setup>
-import { ref } from "vue";
 import BaseButton from "../Buttons/BaseButton.vue";
 import PrimaryButton from "../Buttons/PrimaryButton.vue";
 import SecondaryButton from "../Buttons/SecondaryButton.vue";
@@ -35,6 +34,7 @@ import CardTitle from "../Cards/CardTitle.vue";
 import FadeScaleTransition from "../Transitions/FadeScaleTransition.vue";
 import FadeTransition from "../Transitions/FadeTransition.vue";
 import CloseIcon from "../Icons/CloseIcon.vue";
+
 import {
     current as currentDialog,
     reset as resetDialog,

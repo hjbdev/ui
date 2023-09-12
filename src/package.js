@@ -32,4 +32,7 @@ export { default as SidebarItemGroup } from "./components/Sidebar/SidebarItemGro
 
 export { default as FadeScaleTransition } from "./components/Transitions/FadeScaleTransition.vue";
 
+export { default as Dialogs } from './components/Dialogs/Dialogs.vue';
+export { info as infoDialog, confirm as confirmDialog, reset as resetDialog, default as dialogs } from './support/Dialogs';
+
 export { default as Container } from "./components/Container.vue";
