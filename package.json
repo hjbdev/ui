@@ -1,7 +1,7 @@
 {
-    "name": "hjb-ui",
+    "name": "@hjbdev/ui",
     "private": true,
-    "version": "0.0.0",
+    "version": "0.0.1",
     "scripts": {
         "dev": "bunx --bun vite",
         "build": "bunx --bun vite build",
@@ -27,5 +27,8 @@
         "prettier-plugin-tailwindcss": "^0.5.4",
         "tailwindcss": "^3.0.24",
         "vite": "^4.4.9"
+    },
+    "publishConfig": {
+        "@YOUR-USERNAME:registry": "https://npm.pkg.github.com"
     }
 }
