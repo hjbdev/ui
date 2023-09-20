@@ -2,7 +2,7 @@
     <div>
         <div
             class="fixed inset-0 z-50 flex max-w-full justify-center overflow-y-auto"
-            :class="$modals.all.length ? '' : 'pointer-events-none'"
+            :class="modals.all.length ? '' : 'pointer-events-none'"
             aria-labelledby="modal-title"
             role="dialog"
             aria-modal="true"
@@ -19,7 +19,7 @@
                     leave-to-class="opacity-0"
                 >
                     <div
-                        v-if="$modals.all.length"
+                        v-if="modals.all.length"
                         key="modalBackground"
                         class="fixed inset-0 bg-zinc-500 bg-opacity-75 transition-opacity"
                         aria-hidden="true"
@@ -39,7 +39,7 @@
                     leave-to-class="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95"
                 >
                     <div
-                        v-for="(modal, modalIndex) in $modals.all"
+                        v-for="(modal, modalIndex) in modals.all"
                         :key="`modal${modalIndex}`"
                         class="relative inline-block rounded-lg bg-white px-4 pb-4 pt-5 text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:p-6 sm:align-middle"
                     >
@@ -49,7 +49,7 @@
                             <button
                                 type="button"
                                 class="rounded-md bg-white text-zinc-400 hover:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
-                                @click="$modals.pop()"
+                                @click="modals.pop()"
                             >
                                 <span class="sr-only">Close</span>
                                 <!-- Heroicon name: outline/x -->

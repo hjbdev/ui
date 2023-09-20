@@ -2594,7 +2594,7 @@ function ui(e, t, n, s, r, o) {
     d(
       "div",
       {
-        class: R(["fixed inset-0 z-50 flex max-w-full justify-center overflow-y-auto", e.$modals.all.length ? "" : "pointer-events-none"]),
+        class: R(["fixed inset-0 z-50 flex max-w-full justify-center overflow-y-auto", r.modals.all.length ? "" : "pointer-events-none"]),
         "aria-labelledby": "modal-title",
         role: "dialog",
         "aria-modal": "true"
@@ -2610,7 +2610,7 @@ function ui(e, t, n, s, r, o) {
             "leave-to-class": "opacity-0"
           }, {
             default: z(() => [
-              e.$modals.all.length ? (c(), m("div", si)) : A("v-if", !0)
+              r.modals.all.length ? (c(), m("div", si)) : A("v-if", !0)
             ]),
             _: 1
             /* STABLE */
@@ -2628,7 +2628,7 @@ function ui(e, t, n, s, r, o) {
               (c(!0), m(
                 X,
                 null,
-                Ne(e.$modals.all, (i, a) => (c(), m("div", {
+                Ne(r.modals.all, (i, a) => (c(), m("div", {
                   key: `modal${a}`,
                   class: "relative inline-block rounded-lg bg-white px-4 pb-4 pt-5 text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:p-6 sm:align-middle"
                 }, [
@@ -2636,7 +2636,7 @@ function ui(e, t, n, s, r, o) {
                     d("button", {
                       type: "button",
                       class: "rounded-md bg-white text-zinc-400 hover:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2",
-                      onClick: t[0] || (t[0] = (f) => e.$modals.pop())
+                      onClick: t[0] || (t[0] = (f) => r.modals.pop())
                     }, [
                       ai,
                       A(" Heroicon name: outline/x "),
