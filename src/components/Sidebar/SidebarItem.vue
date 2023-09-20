@@ -93,7 +93,7 @@ const classes = computed(() => {
         </transition>
         <div
             v-if="minimised"
-            class="absolute left-full opacity-0 transition pointer-events-none group-hover:opacity-100 bg-white dark:bg-zinc-900 shadow-lg py-3 px-6 rounded-full ml-3">
+            class="absolute left-full opacity-0 transition pointer-events-none group-hover:opacity-100 bg-white dark:bg-zinc-800 shadow-lg py-3 px-6 rounded-full ml-3">
             <slot />
         </div>
     </component>
