@@ -23,8 +23,6 @@ export { default as Input } from "./components/Inputs/Input.vue";
 export { default as InputLayout } from "./components/Inputs/InputLayout.vue";
 export { default as SelectInput } from "./components/Inputs/SelectInput.vue";
 
-export { default as ModalBase } from "./components/Modals/ModalBase.vue";
-
 export { default as Sidebar } from "./components/Sidebar/Sidebar.vue";
 export { default as SidebarItem } from "./components/Sidebar/SidebarItem.vue";
 export { default as SidebarLayout } from "./components/Sidebar/SidebarLayout.vue";
@@ -39,5 +37,8 @@ export { default as BreadcrumbItem } from "./components/Breadcrumbs/BreadcrumbIt
 
 export { default as Dialogs } from './components/Dialogs/Dialogs.vue';
 export { info as infoDialog, confirm as confirmDialog, reset as resetDialog, default as dialogs } from './support/Dialogs';
+
+export { default as Modals } from './components/Modals/Modals.vue';
+export { push as pushModal, pop as popModal, clear as clearModals, all as allModals, default as all } from './support/Modals';
 
 export { default as Container } from "./components/Container.vue";
