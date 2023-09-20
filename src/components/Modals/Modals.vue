@@ -7,37 +7,22 @@
             role="dialog"
             aria-modal="true"
         >
+            <FadeTransition>
+                <div
+                    v-if="modals.all.length"
+                    key="modalBackground"
+                    class="fixed inset-0 bg-black/40"
+                    aria-hidden="true"
+                ></div>
+            </FadeTransition>
             <div
-                class="flex min-h-screen w-full max-w-xl items-end justify-center px-4 pb-20 pt-4 text-center sm:block sm:p-0"
+                class="flex min-h-screen w-full max-w-xl justify-center sm:block"
             >
-                <Transition
-                    enter-active-class="duration-300 ease-out"
-                    enter-from-class="opacity-0"
-                    enter-to-class="opacity-100"
-                    leave-active-class="duration-200 ease-in"
-                    leave-from-class="opacity-100"
-                    leave-to-class="opacity-0"
-                >
-                    <div
-                        v-if="modals.all.length"
-                        key="modalBackground"
-                        class="fixed inset-0 bg-black/40 transition"
-                        aria-hidden="true"
-                    ></div>
-                </Transition>
-                <span class="inline-block" aria-hidden="true">&#8203;</span>
-                <TransitionGroup
-                    enter-active-class="duration-150 ease-out"
-                    enter-from-class="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95"
-                    enter-to-class="translate-y-0 opacity-100 sm:scale-100"
-                    leave-active-class="duration-200 ease-in"
-                    leave-from-class="translate-y-0 opacity-100 sm:scale-100"
-                    leave-to-class="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95"
-                >
+                <FadeScaleTransition>
                     <div
                         v-for="(modal, modalIndex) in modals.all"
                         :key="`modal${modalIndex}`"
-                        class="w=full relative inline-block rounded-lg bg-white p-4 text-left align-bottom shadow-xl transition-all dark:bg-zinc-900 dark:text-white sm:my-8 sm:p-6 sm:align-middle"
+                        class="relative w-full rounded-lg bg-white p-4 shadow-xl transition-all dark:bg-zinc-900 dark:text-white sm:my-8 sm:p-6"
                     >
                         <div
                             class="absolute right-0 top-0 hidden pr-4 pt-4 sm:block"
@@ -72,14 +57,15 @@
                             :data="modal.data"
                         ></component>
                     </div>
-                </TransitionGroup>
+                </FadeScaleTransition>
             </div>
         </div>
     </div>
 </template>
 <script setup>
-import { nextTick, ref, watch } from "vue";
 import modals from "../../support/Modals";
+import FadeTransition from "../Transitions/FadeTransition.vue";
+import FadeScaleTransition from "../Transitions/FadeScaleTransition.vue";
 
 const open = ref(false);
 
