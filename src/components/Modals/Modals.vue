@@ -66,6 +66,7 @@
 import modals from "../../support/Modals";
 import FadeTransition from "../Transitions/FadeTransition.vue";
 import FadeScaleTransition from "../Transitions/FadeScaleTransition.vue";
+import { nextTick, ref, watch } from "vue";
 
 const open = ref(false);
 
