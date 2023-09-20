@@ -81,30 +81,26 @@
         </div>
     </div>
 </template>
-<script>
+<script setup>
+import { nextTick, ref, watch } from "vue";
 import modals from "../../support/Modals";
 
-export default {
-    data() {
-        return {
-            open: false,
-            modals,
-        };
+const open = ref(false);
+
+watch(
+    () => modals.modals,
+    (v) => {
+        if (v.length) {
+            document.body.classList.add("overflow-hidden");
+            nextTick(() => {
+                open.value = true;
+            });
+        } else {
+            document.body.classList.remove("overflow-hidden");
+            nextTick(() => {
+                open.value = false;
+            });
+        }
     },
-    watch: {
-        "modals.modals": function (v) {
-            if (v.length) {
-                document.body.classList.add("overflow-hidden");
-                this.$nextTick(() => {
-                    this.open = true;
-                });
-            } else {
-                document.body.classList.remove("overflow-hidden");
-                this.$nextTick(() => {
-                    this.open = false;
-                });
-            }
-        },
-    },
-};
+);
 </script>
