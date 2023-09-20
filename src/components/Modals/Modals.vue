@@ -25,7 +25,7 @@
                         class="relative w-full rounded-lg bg-white p-4 shadow-xl transition-all dark:bg-zinc-900 dark:text-white sm:my-8 sm:p-6"
                     >
                         <div
-                            class="absolute right-0 top-0 hidden pr-4 pt-4"
+                            class="absolute right-0 top-0 pr-4 pt-4"
                         >
                             <button
                                 type="button"

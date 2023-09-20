@@ -2537,7 +2537,7 @@ const V = le({
   key: "modalBackground",
   class: "fixed inset-0 bg-black/40",
   "aria-hidden": "true"
-}, ri = { class: "flex min-h-screen w-full max-w-xl justify-center items-end sm:items-center" }, oi = { class: "absolute right-0 top-0 hidden pr-4 pt-4" }, si = /* @__PURE__ */ d(
+}, ri = { class: "flex min-h-screen w-full max-w-xl justify-center items-end sm:items-center" }, oi = { class: "absolute right-0 top-0 pr-4 pt-4" }, si = /* @__PURE__ */ d(
   "span",
   { class: "sr-only" },
   "Close",
