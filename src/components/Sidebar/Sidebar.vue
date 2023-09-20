@@ -29,7 +29,7 @@ provide('sidebarMinimised', sidebarMinimised);
             <slot />
         </div>
 
-        <div class="flex flex-col gap-6 px-6 mb-6">
+        <div class="flex flex-col gap-6 mb-6">
             <slot name="bottom" />
         </div>
     </nav>
