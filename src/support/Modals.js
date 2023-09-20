@@ -14,30 +14,30 @@ const modals = reactive({
         if (!data.key) {
             data.key = genKey();
         }
-        this.modals.push(reactive(new Modal(component, data)));
+        modals.modals.push(reactive(new Modal(component, data)));
         document.body.classList.add("overflow-y-hidden");
 
         return data.key;
     },
     pop(amount = 1) {
         for (let i = 0; i < amount; i += 1) {
-            this.modals.pop();
+            modals.modals.pop();
         }
-        if (this.modals.length === 0) {
+        if (modals.modals.length === 0) {
             document.body.classList.remove("overflow-y-hidden");
         }
     },
     clear() {
-        this.modals = reactive([]);
+        modals.modals = reactive([]);
     },
     findByKey(key) {
-        return this.modals.find((item) => item.data.key === key);
+        return modals.modals.find((item) => item.data.key === key);
     },
     get current() {
-        return this.modals[this.modals.length - 1];
+        return modals.modals[modals.modals.length - 1];
     },
     get all() {
-        return this.modals;
+        return modals.modals;
     },
 });
 
