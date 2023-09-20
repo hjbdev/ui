@@ -8,7 +8,7 @@
             aria-modal="true"
         >
             <div
-                class="flex min-h-screen items-end justify-center px-4 pb-20 pt-4 text-center sm:block sm:p-0"
+                class="flex min-h-screen w-full max-w-xl items-end justify-center px-4 pb-20 pt-4 text-center sm:block sm:p-0"
             >
                 <Transition
                     enter-active-class="duration-300 ease-out"
@@ -21,15 +21,11 @@
                     <div
                         v-if="modals.all.length"
                         key="modalBackground"
-                        class="fixed inset-0 bg-black/25 transition"
+                        class="fixed inset-0 bg-black/40 transition"
                         aria-hidden="true"
                     ></div>
                 </Transition>
-                <span
-                    class="hidden sm:inline-block sm:h-screen sm:align-middle"
-                    aria-hidden="true"
-                    >&#8203;</span
-                >
+                <span class="inline-block" aria-hidden="true">&#8203;</span>
                 <TransitionGroup
                     enter-active-class="duration-150 ease-out"
                     enter-from-class="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95"
@@ -41,7 +37,7 @@
                     <div
                         v-for="(modal, modalIndex) in modals.all"
                         :key="`modal${modalIndex}`"
-                        class="relative inline-block rounded-lg bg-white dark:bg-zinc-900 dark:text-white px-4 pb-4 pt-5 text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:p-6 sm:align-middle"
+                        class="w=full relative inline-block rounded-lg bg-white p-4 text-left align-bottom shadow-xl transition-all dark:bg-zinc-900 dark:text-white sm:my-8 sm:p-6 sm:align-middle"
                     >
                         <div
                             class="absolute right-0 top-0 hidden pr-4 pt-4 sm:block"

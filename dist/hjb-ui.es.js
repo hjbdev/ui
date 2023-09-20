@@ -2533,14 +2533,14 @@ const V = ue({
   get all() {
     return V.modals;
   }
-}), { push: Pi, pop: Ii, clear: Bi } = V, Mi = () => V.all, ri = { class: "flex min-h-screen items-end justify-center px-4 pb-20 pt-4 text-center sm:block sm:p-0" }, si = {
+}), { push: Pi, pop: Ii, clear: Bi } = V, Mi = () => V.all, ri = { class: "flex min-h-screen w-full max-w-xl items-end justify-center px-4 pb-20 pt-4 text-center sm:block sm:p-0" }, si = {
   key: "modalBackground",
-  class: "fixed inset-0 bg-black/25 transition",
+  class: "fixed inset-0 bg-black/40 transition",
   "aria-hidden": "true"
 }, oi = /* @__PURE__ */ d(
   "span",
   {
-    class: "hidden sm:inline-block sm:h-screen sm:align-middle",
+    class: "inline-block",
     "aria-hidden": "true"
   },
   "​",
@@ -2625,7 +2625,7 @@ const V = ue({
                   null,
                   Ve(D(V).all, (r, o) => (c(), m("div", {
                     key: `modal${o}`,
-                    class: "relative inline-block rounded-lg bg-white dark:bg-zinc-900 dark:text-white px-4 pb-4 pt-5 text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:p-6 sm:align-middle"
+                    class: "w=full relative inline-block rounded-lg bg-white p-4 text-left align-bottom shadow-xl transition-all dark:bg-zinc-900 dark:text-white sm:my-8 sm:p-6 sm:align-middle"
                   }, [
                     d("div", ii, [
                       d("button", {
