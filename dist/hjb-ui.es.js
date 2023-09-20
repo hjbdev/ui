@@ -1445,20 +1445,20 @@ const ms = le({
       }));
     }
   }
-}, vs = { class: "flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0" }, gs = {
+}, vs = { class: "flex min-h-screen items-end justify-center px-4 pb-20 pt-4 text-center sm:block sm:p-0" }, gs = {
   key: "modalBackground",
-  class: "fixed inset-0 transition-opacity bg-zinc-500 bg-opacity-75",
+  class: "fixed inset-0 bg-zinc-500 bg-opacity-75 transition-opacity",
   "aria-hidden": "true"
 }, bs = /* @__PURE__ */ d(
   "span",
   {
-    class: "hidden sm:inline-block sm:align-middle sm:h-screen",
+    class: "hidden sm:inline-block sm:h-screen sm:align-middle",
     "aria-hidden": "true"
   },
   "​",
   -1
   /* HOISTED */
-), ys = { class: "absolute top-0 right-0 hidden pt-4 pr-4 sm:block" }, _s = /* @__PURE__ */ d(
+), ys = { class: "absolute right-0 top-0 hidden pr-4 pt-4 sm:block" }, _s = /* @__PURE__ */ d(
   "span",
   { class: "sr-only" },
   "Close",
@@ -1467,7 +1467,7 @@ const ms = le({
 ), ws = /* @__PURE__ */ d(
   "svg",
   {
-    class: "w-6 h-6",
+    class: "h-6 w-6",
     xmlns: "http://www.w3.org/2000/svg",
     fill: "none",
     viewBox: "0 0 24 24",
@@ -1490,7 +1490,7 @@ function xs(e, t, n, s, r, o) {
     d(
       "div",
       {
-        class: R(["fixed inset-0 z-50 flex justify-center max-w-full overflow-y-auto", e.$modals.all.length ? "" : "pointer-events-none"]),
+        class: R(["fixed inset-0 z-50 flex max-w-full justify-center overflow-y-auto", e.$modals.all.length ? "" : "pointer-events-none"]),
         "aria-labelledby": "modal-title",
         role: "dialog",
         "aria-modal": "true"
@@ -1526,12 +1526,12 @@ function xs(e, t, n, s, r, o) {
                 null,
                 Ne(e.$modals.all, (i, a) => (c(), m("div", {
                   key: `modal${a}`,
-                  class: "relative inline-block px-4 pt-5 pb-4 text-left align-bottom transition-all bg-white rounded-lg shadow-xl sm:my-8 sm:align-middle sm:w-full sm:p-6"
+                  class: "relative inline-block rounded-lg bg-white px-4 pb-4 pt-5 text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:p-6 sm:align-middle"
                 }, [
                   d("div", ys, [
                     d("button", {
                       type: "button",
-                      class: "text-zinc-400 bg-white rounded-md hover:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500",
+                      class: "rounded-md bg-white text-zinc-400 hover:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2",
                       onClick: t[0] || (t[0] = (f) => e.$modals.pop())
                     }, [
                       _s,
@@ -1539,7 +1539,7 @@ function xs(e, t, n, s, r, o) {
                       ws
                     ])
                   ]),
-                  (c(), M(G(i.name), {
+                  (c(), M(G(i.component), {
                     "modal-index": a,
                     data: i.data
                   }, null, 8, ["modal-index", "data"]))

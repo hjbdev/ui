@@ -1,13 +1,15 @@
 <template>
     <div>
         <div
-            class="fixed inset-0 z-50 flex justify-center max-w-full overflow-y-auto"
+            class="fixed inset-0 z-50 flex max-w-full justify-center overflow-y-auto"
             :class="$modals.all.length ? '' : 'pointer-events-none'"
             aria-labelledby="modal-title"
             role="dialog"
             aria-modal="true"
         >
-            <div class="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+            <div
+                class="flex min-h-screen items-end justify-center px-4 pb-20 pt-4 text-center sm:block sm:p-0"
+            >
                 <Transition
                     enter-active-class="duration-300 ease-out"
                     enter-from-class="opacity-0"
@@ -19,11 +21,15 @@
                     <div
                         v-if="$modals.all.length"
                         key="modalBackground"
-                        class="fixed inset-0 transition-opacity bg-zinc-500 bg-opacity-75"
+                        class="fixed inset-0 bg-zinc-500 bg-opacity-75 transition-opacity"
                         aria-hidden="true"
                     ></div>
                 </Transition>
-                <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+                <span
+                    class="hidden sm:inline-block sm:h-screen sm:align-middle"
+                    aria-hidden="true"
+                    >&#8203;</span
+                >
                 <TransitionGroup
                     enter-active-class="duration-150 ease-out"
                     enter-from-class="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95"
@@ -35,18 +41,20 @@
                     <div
                         v-for="(modal, modalIndex) in $modals.all"
                         :key="`modal${modalIndex}`"
-                        class="relative inline-block px-4 pt-5 pb-4 text-left align-bottom transition-all bg-white rounded-lg shadow-xl sm:my-8 sm:align-middle sm:w-full sm:p-6"
+                        class="relative inline-block rounded-lg bg-white px-4 pb-4 pt-5 text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:p-6 sm:align-middle"
                     >
-                        <div class="absolute top-0 right-0 hidden pt-4 pr-4 sm:block">
+                        <div
+                            class="absolute right-0 top-0 hidden pr-4 pt-4 sm:block"
+                        >
                             <button
                                 type="button"
-                                class="text-zinc-400 bg-white rounded-md hover:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+                                class="rounded-md bg-white text-zinc-400 hover:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
                                 @click="$modals.pop()"
                             >
                                 <span class="sr-only">Close</span>
                                 <!-- Heroicon name: outline/x -->
                                 <svg
-                                    class="w-6 h-6"
+                                    class="h-6 w-6"
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 24 24"
@@ -62,7 +70,11 @@
                                 </svg>
                             </button>
                         </div>
-                        <component :is="modal.name" :modal-index="modalIndex" :data="modal.data"></component>
+                        <component
+                            :is="modal.component"
+                            :modal-index="modalIndex"
+                            :data="modal.data"
+                        ></component>
                     </div>
                 </TransitionGroup>
             </div>
