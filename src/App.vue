@@ -23,17 +23,25 @@ import HH1 from "./components/Headings/HH1.vue";
 import HH2 from "./components/Headings/HH2.vue";
 import HH3 from "./components/Headings/HH3.vue";
 import Dialogs from "./components/Dialogs/Dialogs.vue";
-import { info as infoDialog, confirm as confirmDialog } from "./support/Dialogs";
+import {
+    info as infoDialog,
+    confirm as confirmDialog,
+} from "./support/Dialogs";
+import Breadcrumbs from "./components/Breadcrumbs/Breadcrumbs.vue";
+import BreadcrumbItem from "./components/Breadcrumbs/BreadcrumbItem.vue";
+import CollapseTransition from "./components/Transitions/CollapseTransition.vue";
 
 async function testConfirmDialog() {
-    const result = await confirmDialog('Info', 'Are you sure');
-    console.log('confirm dialog result', result);
+    const result = await confirmDialog("Info", "Are you sure");
+    console.log("confirm dialog result", result);
 }
 
 const exampleSelectValue = ref(null);
+
+const collapseOpen = ref(false);
 </script>
 <template>
-    <SidebarLayout class="min-h-screen min-w-screen dark:bg-zinc-900">
+    <SidebarLayout class="min-w-screen min-h-screen dark:bg-zinc-900">
         <template #sidebar>
             <Sidebar>
                 <SidebarItemGroup>
@@ -44,7 +52,33 @@ const exampleSelectValue = ref(null);
 
         <Dialogs />
 
-        <Container class="pt-6 grid gap-6">
+        <Container class="grid gap-6 pt-6">
+            <PrimaryButton @click="collapseOpen = !collapseOpen">
+                {{ collapseOpen ? "Close" : "Open" }}
+            </PrimaryButton>
+            <div>
+                <CollapseTransition>
+                    <div v-if="collapseOpen" class="rounded-lg">
+                        <Card>
+                            <template #header>
+                                <CardTitle>Collapse</CardTitle>
+                            </template>
+                        </Card>
+                    </div>
+                </CollapseTransition>
+            </div>
+            <Card>
+                <template #header>
+                    <CardTitle>Breadcrumbs</CardTitle>
+                </template>
+                <Breadcrumbs>
+                    <BreadcrumbItem>Hello</BreadcrumbItem>
+                    <BreadcrumbItem>Hello</BreadcrumbItem>
+                    <BreadcrumbItem as="a" href="https://google.com"
+                        >Hello</BreadcrumbItem
+                    >
+                </Breadcrumbs>
+            </Card>
             <Card>
                 <template #header>
                     <CardTitle>This is a card</CardTitle>
@@ -63,23 +97,28 @@ const exampleSelectValue = ref(null);
                     label="Full Name"
                     id="full_name"
                     name="full_name"
-                    help-text="Do you even know your name?"></Input>
+                    help-text="Do you even know your name?"
+                ></Input>
                 <Input
                     type="email"
                     label="Email Address"
                     id="email"
                     name="email"
-                    error="You must enter an email address"></Input>
+                    error="You must enter an email address"
+                ></Input>
                 <SelectInput
                     v-model="exampleSelectValue"
                     label="Hello"
-                    :options="[{
-                        id: 'test',
-                        name: 'Test'
-                    }, {
-                        id: 'test2',
-                        name: 'Test2'
-                    }]"
+                    :options="[
+                        {
+                            id: 'test',
+                            name: 'Test',
+                        },
+                        {
+                            id: 'test2',
+                            name: 'Test2',
+                        },
+                    ]"
                 />
             </Card>
             <Card>
@@ -139,8 +178,13 @@ const exampleSelectValue = ref(null);
                     <CardTitle>Dialogs</CardTitle>
                 </template>
                 <div>
-                    <PrimaryButton @click="infoDialog('Info', 'this is a subtitle')">Regular Dialog</PrimaryButton>
-                    <PrimaryButton @click="testConfirmDialog">Confirmation Dialog</PrimaryButton>
+                    <PrimaryButton
+                        @click="infoDialog('Info', 'this is a subtitle')"
+                        >Regular Dialog</PrimaryButton
+                    >
+                    <PrimaryButton @click="testConfirmDialog"
+                        >Confirmation Dialog</PrimaryButton
+                    >
                 </div>
             </Card>
             <ModalBase></ModalBase>

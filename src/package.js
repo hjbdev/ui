@@ -31,6 +31,11 @@ export { default as SidebarLayout } from "./components/Sidebar/SidebarLayout.vue
 export { default as SidebarItemGroup } from "./components/Sidebar/SidebarItemGroup.vue";
 
 export { default as FadeScaleTransition } from "./components/Transitions/FadeScaleTransition.vue";
+export { default as FadeTransition } from "./components/Transitions/FadeTransition.vue";
+export { default as CollapseTransition } from "./components/Transitions/CollapseTransition.vue";
+
+export { default as Breadcrumbs } from "./components/Breadcrumbs/Breadcrumbs.vue";
+export { default as BreadcrumbItem } from "./components/Breadcrumbs/BreadcrumbItem.vue";
 
 export { default as Dialogs } from './components/Dialogs/Dialogs.vue';
 export { info as infoDialog, confirm as confirmDialog, reset as resetDialog, default as dialogs } from './support/Dialogs';
