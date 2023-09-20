@@ -21,7 +21,7 @@
                     <div
                         v-if="modals.all.length"
                         key="modalBackground"
-                        class="fixed inset-0 bg-zinc-500 bg-opacity-75 transition-opacity"
+                        class="fixed inset-0 bg-black/25 transition"
                         aria-hidden="true"
                     ></div>
                 </Transition>
@@ -41,14 +41,14 @@
                     <div
                         v-for="(modal, modalIndex) in modals.all"
                         :key="`modal${modalIndex}`"
-                        class="relative inline-block rounded-lg bg-white px-4 pb-4 pt-5 text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:p-6 sm:align-middle"
+                        class="relative inline-block rounded-lg bg-white dark:bg-zinc-900 dark:text-white px-4 pb-4 pt-5 text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:p-6 sm:align-middle"
                     >
                         <div
                             class="absolute right-0 top-0 hidden pr-4 pt-4 sm:block"
                         >
                             <button
                                 type="button"
-                                class="rounded-md bg-white text-zinc-400 hover:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+                                class="rounded-md text-zinc-400 hover:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
                                 @click="modals.pop()"
                             >
                                 <span class="sr-only">Close</span>

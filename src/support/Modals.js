@@ -1,4 +1,4 @@
-import { reactive } from "vue";
+import { markRaw, reactive } from "vue";
 import genKey from "./genKey";
 
 class Modal {
@@ -14,7 +14,7 @@ const modals = reactive({
         if (!data.key) {
             data.key = genKey();
         }
-        modals.modals.push(reactive(new Modal(component, data)));
+        modals.modals.push(reactive(new Modal(markRaw(component), data)));
         document.body.classList.add("overflow-y-hidden");
 
         return data.key;
