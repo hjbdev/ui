@@ -1,6 +1,6 @@
 {
   "name": "@hjbdev/ui",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "scripts": {
     "dev": "bunx --bun vite",
     "build": "bunx --bun vite build",
