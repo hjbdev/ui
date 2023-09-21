@@ -7,7 +7,7 @@ import InfoAlert from "./components/Alerts/InfoAlert.vue";
 import SuccessAlert from "./components/Alerts/SuccessAlert.vue";
 import WarningAlert from "./components/Alerts/WarningAlert.vue";
 import AlertAction from "./components/Alerts/AlertAction.vue";
-import ModalBase from "./components/Modals/ModalBase.vue";
+import Modals from "./components/Modals/Modals.vue";
 import CardTitle from "./components/Cards/CardTitle.vue";
 import PrimaryButton from "./components/Buttons/PrimaryButton.vue";
 import SecondaryButton from "./components/Buttons/SecondaryButton.vue";
@@ -30,6 +30,8 @@ import {
 import Breadcrumbs from "./components/Breadcrumbs/Breadcrumbs.vue";
 import BreadcrumbItem from "./components/Breadcrumbs/BreadcrumbItem.vue";
 import CollapseTransition from "./components/Transitions/CollapseTransition.vue";
+import vAutoResize from "./support/vAutoResize";
+import { useIntervalFn } from "@vueuse/core";
 
 async function testConfirmDialog() {
     const result = await confirmDialog("Info", "Are you sure");
@@ -39,6 +41,12 @@ async function testConfirmDialog() {
 const exampleSelectValue = ref(null);
 
 const collapseOpen = ref(false);
+const resizeTest = ref(null);
+const resizeInnerVisible = ref(false);
+
+useIntervalFn(() => {
+    resizeInnerVisible.value = !resizeInnerVisible.value;
+}, 1000);
 </script>
 <template>
     <SidebarLayout class="min-w-screen min-h-screen dark:bg-zinc-900">
@@ -53,6 +61,10 @@ const collapseOpen = ref(false);
         <Dialogs />
 
         <Container class="grid gap-6 pt-6">
+            <div ref="resizeTest" class="bg-red-200" v-auto-resize>
+                <div v-if="resizeInnerVisible" class="h-48 bg-red"></div>
+            </div>
+
             <PrimaryButton @click="collapseOpen = !collapseOpen">
                 {{ collapseOpen ? "Close" : "Open" }}
             </PrimaryButton>
@@ -187,7 +199,7 @@ const collapseOpen = ref(false);
                     >
                 </div>
             </Card>
-            <ModalBase></ModalBase>
+            <Modals />
         </Container>
     </SidebarLayout>
 </template>

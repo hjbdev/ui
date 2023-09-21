@@ -42,3 +42,5 @@ export { default as Modals } from './components/Modals/Modals.vue';
 export { push as pushModal, pop as popModal, clear as clearModals, all as allModals, default as all } from './support/Modals';
 
 export { default as Container } from "./components/Container.vue";
+
+export { default as vAutoResize } from "./support/vAutoResize";
