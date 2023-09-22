@@ -16,13 +16,19 @@
                 ></div>
             </FadeTransition>
             <div
-                class="flex min-h-screen w-full max-w-xl justify-center items-end sm:items-center"
+                class="flex min-h-screen w-screen justify-center items-end sm:items-center"
             >
                 <FadeScaleTransition>
                     <div
                         v-for="(modal, modalIndex) in modals.all"
                         :key="`modal${modalIndex}`"
                         class="relative w-full rounded-lg bg-white p-4 shadow-xl transition-all dark:bg-zinc-900 dark:text-white sm:my-8 sm:p-6"
+                        :class="{
+                            'max-w-6xl': modal.data.size = 'huge',
+                            'max-w-3xl': modal.data.size = 'large',
+                            'max-w-xl': modal.data.size = 'medium',
+                            'max-w-md': modal.data.size = 'small',
+                        }"
                     >
                         <div
                             class="absolute right-0 top-0 pr-4 pt-4"

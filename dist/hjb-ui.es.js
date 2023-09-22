@@ -1,4 +1,4 @@
-import { openBlock as d, createBlock as R, resolveDynamicComponent as X, withCtx as z, createTextVNode as ee, createElementVNode as p, createElementBlock as y, normalizeClass as B, renderSlot as x, createCommentVNode as A, onMounted as ae, onUnmounted as yt, computed as j, ref as M, withDirectives as tt, vShow as nt, createVNode as N, Transition as ye, toDisplayString as Z, normalizeProps as _t, guardReactiveProps as wt, mergeProps as Yt, cloneVNode as Qt, h as Fe, Fragment as Y, inject as We, provide as Ke, watchEffect as De, defineComponent as ce, watch as de, nextTick as G, toRaw as W, unref as T, renderList as Ge, getCurrentScope as Zt, onScopeDispose as en, readonly as tn, getCurrentInstance as nn, shallowRef as rn, useSlots as sn, reactive as te, createSlots as on, markRaw as an } from "vue";
+import { openBlock as d, createBlock as B, resolveDynamicComponent as X, withCtx as z, createTextVNode as ee, createElementVNode as p, createElementBlock as y, normalizeClass as I, renderSlot as x, createCommentVNode as A, onMounted as ae, onUnmounted as yt, computed as j, ref as M, withDirectives as tt, vShow as nt, createVNode as N, Transition as ye, toDisplayString as Z, normalizeProps as _t, guardReactiveProps as wt, mergeProps as Yt, cloneVNode as Qt, h as Fe, Fragment as Y, inject as We, provide as Ke, watchEffect as De, defineComponent as ce, watch as de, nextTick as G, toRaw as W, unref as T, renderList as Ge, getCurrentScope as Zt, onScopeDispose as en, readonly as tn, getCurrentInstance as nn, shallowRef as rn, useSlots as sn, reactive as te, createSlots as on, markRaw as an } from "vue";
 const O = (e, t) => {
   const n = e.__vccOpts || e;
   for (const [s, r] of t)
@@ -19,7 +19,7 @@ const O = (e, t) => {
     }
   },
   setup(e) {
-    return (t, n) => (d(), R(X(e.as), { class: "whitespace-nowrap font-medium" }, {
+    return (t, n) => (d(), B(X(e.as), { class: "whitespace-nowrap font-medium" }, {
       default: z(() => [
         ee("Details "),
         ln
@@ -62,7 +62,7 @@ function bn(e, t) {
           "h3",
           {
             key: 0,
-            class: B(["text-sm font-medium text-red-800 dark:text-red-200", {
+            class: I(["text-sm font-medium text-red-800 dark:text-red-200", {
               "mb-2": e.$slots.default
             }])
           },
@@ -118,7 +118,7 @@ function zn(e, t) {
           "h3",
           {
             key: 0,
-            class: B(["text-sm font-medium text-blue-800 dark:text-blue-200", {
+            class: I(["text-sm font-medium text-blue-800 dark:text-blue-200", {
               "mb-2": e.$slots.default
             }])
           },
@@ -174,7 +174,7 @@ function Pn(e, t) {
           "h3",
           {
             key: 0,
-            class: B(["text-sm font-medium text-green-800 dark:text-green-200", {
+            class: I(["text-sm font-medium text-green-800 dark:text-green-200", {
               "mb-2": e.$slots.default
             }])
           },
@@ -230,7 +230,7 @@ function qn(e, t) {
           "h3",
           {
             key: 0,
-            class: B(["text-sm font-medium text-yellow-800 dark:text-yellow-200", {
+            class: I(["text-sm font-medium text-yellow-800 dark:text-yellow-200", {
               "mb-2": e.$slots.default
             }])
           },
@@ -265,8 +265,8 @@ const Ei = /* @__PURE__ */ O(In, [["render", qn], ["__file", "/home/harry/Sites/
     }
   },
   setup(e) {
-    return (t, n) => (d(), R(X(e.as), {
-      class: B(["inline-flex items-center border border-transparent rounded-md font-semibold transition ease-in-out duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2", {
+    return (t, n) => (d(), B(X(e.as), {
+      class: I(["inline-flex items-center border border-transparent rounded-md font-semibold transition ease-in-out duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2", {
         "p-1.5": e.size === "uniform",
         "px-1 py-0.5 text-xs": e.size === "tiny",
         "px-2 py-1 text-xs": e.size === "small",
@@ -284,7 +284,7 @@ const Ei = /* @__PURE__ */ O(In, [["render", qn], ["__file", "/home/harry/Sites/
 }, Le = /* @__PURE__ */ O(Wn, [["__file", "/home/harry/Sites/ui/src/components/Buttons/BaseButton.vue"]]), Kn = {
   __name: "PrimaryButton",
   setup(e) {
-    return (t, n) => (d(), R(Le, { class: "bg-zinc-800 dark:bg-zinc-200 text-white dark:text-zinc-800 hover:bg-zinc-700 dark:hover:bg-white focus:bg-zinc-700 dark:focus:bg-white active:bg-zinc-900 dark:active:bg-zinc-300 focus:ring-indigo-500 dark:focus:ring-offset-zinc-800 disabled:opacity-25" }, {
+    return (t, n) => (d(), B(Le, { class: "bg-zinc-800 dark:bg-zinc-200 text-white dark:text-zinc-800 hover:bg-zinc-700 dark:hover:bg-white focus:bg-zinc-700 dark:focus:bg-white active:bg-zinc-900 dark:active:bg-zinc-300 focus:ring-indigo-500 dark:focus:ring-offset-zinc-800 disabled:opacity-25" }, {
       default: z(() => [
         x(t.$slots, "default")
       ]),
@@ -301,7 +301,7 @@ const Ei = /* @__PURE__ */ O(In, [["render", qn], ["__file", "/home/harry/Sites/
     }
   },
   setup(e) {
-    return (t, n) => (d(), R(Le, {
+    return (t, n) => (d(), B(Le, {
       type: e.type,
       class: "bg-white dark:bg-zinc-800 border-zinc-300 dark:border-zinc-500 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-zinc-800"
     }, {
@@ -315,7 +315,7 @@ const Ei = /* @__PURE__ */ O(In, [["render", qn], ["__file", "/home/harry/Sites/
 }, Jn = /* @__PURE__ */ O(Gn, [["__file", "/home/harry/Sites/ui/src/components/Buttons/SecondaryButton.vue"]]), Xn = {
   __name: "DangerButton",
   setup(e) {
-    return (t, n) => (d(), R(Le, { class: "bg-red-600 text-white hover:bg-red-500 active:bg-red-700 focus:ring-red-500 dark:focus:ring-offset-zinc-800" }, {
+    return (t, n) => (d(), B(Le, { class: "bg-red-600 text-white hover:bg-red-500 active:bg-red-700 focus:ring-red-500 dark:focus:ring-offset-zinc-800" }, {
       default: z(() => [
         x(t.$slots, "default")
       ]),
@@ -339,7 +339,7 @@ const Ei = /* @__PURE__ */ O(In, [["render", qn], ["__file", "/home/harry/Sites/
     return (t, n) => (d(), y(
       "div",
       {
-        class: B(["bg-white dark:bg-zinc-800 shadow-sm rounded-xl text-zinc-900 dark:text-zinc-100", {
+        class: I(["bg-white dark:bg-zinc-800 shadow-sm rounded-xl text-zinc-900 dark:text-zinc-100", {
           "p-6": !e.flush
         }])
       },
@@ -357,7 +357,7 @@ const Ei = /* @__PURE__ */ O(In, [["render", qn], ["__file", "/home/harry/Sites/
           "div",
           {
             key: 1,
-            class: B(["mt-6 flex gap-2", {
+            class: I(["mt-6 flex gap-2", {
               "justify-end": e.footerJustify === "end",
               "justify-between": e.footerJustify === "between"
             }])
@@ -442,7 +442,7 @@ const sr = /* @__PURE__ */ O(tr, [["render", rr], ["__file", "/home/harry/Sites/
           tt(p(
             "div",
             {
-              class: B(["absolute z-50 mt-2 rounded-md shadow-lg", [s.value, r.value, t.bottom ? "bottom-full" : ""]]),
+              class: I(["absolute z-50 mt-2 rounded-md shadow-lg", [s.value, r.value, t.bottom ? "bottom-full" : ""]]),
               style: { display: "none" },
               onClick: a[2] || (a[2] = (c) => o.value = !1)
             },
@@ -450,7 +450,7 @@ const sr = /* @__PURE__ */ O(tr, [["render", rr], ["__file", "/home/harry/Sites/
               p(
                 "div",
                 {
-                  class: B(["rounded-md ring-1 ring-black ring-opacity-5", e.contentClasses])
+                  class: I(["rounded-md ring-1 ring-black ring-opacity-5", e.contentClasses])
                 },
                 [
                   x(i.$slots, "content")
@@ -483,7 +483,7 @@ const sr = /* @__PURE__ */ O(tr, [["render", rr], ["__file", "/home/harry/Sites/
     }
   },
   setup(e) {
-    return (t, n) => (d(), R(X(e.as), {
+    return (t, n) => (d(), B(X(e.as), {
       href: e.href,
       class: "block w-full px-4 py-2 text-left text-sm leading-5 text-zinc-700 transition duration-150 ease-in-out hover:bg-zinc-100 focus:bg-zinc-100 focus:outline-none dark:text-zinc-300 dark:hover:bg-zinc-800 dark:focus:bg-zinc-800"
     }, {
@@ -597,7 +597,7 @@ const Ri = /* @__PURE__ */ O(hr, [["render", vr], ["__file", "/home/harry/Sites/
     ...Oe
   },
   setup(e) {
-    return (t, n) => (d(), R(
+    return (t, n) => (d(), B(
       xt,
       _t(wt(t.$props)),
       {
@@ -1055,7 +1055,7 @@ let ss = ce({ name: "Listbox", emits: { "update:modelValue": (e) => !0 }, props:
     }, { immediate: !0 });
   }), () => {
     let { name: g, modelValue: b, disabled: k, form: S, ...C } = e, v = { open: r.value === 0, disabled: k, value: D.value };
-    return Fe(Y, [...g != null && D.value != null ? At({ [g]: D.value }).map(([I, L]) => Fe(Gr, Tr({ features: Tt.Hidden, key: I, as: "input", type: "hidden", hidden: !0, readOnly: !0, form: S, name: I, value: L }))) : [], fe({ ourProps: {}, theirProps: { ...n, ...kt(C, ["defaultValue", "onUpdate:modelValue", "horizontal", "multiple", "by"]) }, slot: v, slots: t, attrs: n, name: "Listbox" })]);
+    return Fe(Y, [...g != null && D.value != null ? At({ [g]: D.value }).map(([R, L]) => Fe(Gr, Tr({ features: Tt.Hidden, key: R, as: "input", type: "hidden", hidden: !0, readOnly: !0, form: S, name: R, value: L }))) : [], fe({ ourProps: {}, theirProps: { ...n, ...kt(C, ["defaultValue", "onUpdate:modelValue", "horizontal", "multiple", "by"]) }, slot: v, slots: t, attrs: n, name: "Listbox" })]);
   };
 } });
 ce({ name: "ListboxLabel", props: { as: { type: [Object, String], default: "label" }, id: { type: String, default: () => `headlessui-listbox-label-${Ee()}` } }, setup(e, { attrs: t, slots: n }) {
@@ -1236,7 +1236,7 @@ function fs(e, t) {
 }
 const ps = /* @__PURE__ */ O(ls, [["render", fs], ["__file", "/home/harry/Sites/ui/src/components/Icons/CheckIcon.vue"]]), hs = {};
 function ms(e, t) {
-  return d(), R(ye, {
+  return d(), B(ye, {
     "enter-active-class": "transition ease-out duration-200",
     "enter-from-class": "transform opacity-0 scale-95",
     "enter-to-class": "transform opacity-100 scale-100",
@@ -1294,7 +1294,7 @@ const ws = /* @__PURE__ */ O(vs, [["render", _s], ["__file", "/home/harry/Sites/
   },
   emits: ["update:modelValue"],
   setup(e) {
-    return (t, n) => (d(), R(
+    return (t, n) => (d(), B(
       xt,
       _t(wt(
         Object.keys(T(Oe)).reduce((s, r) => (s[r] = t.$props[r], s), {})
@@ -1309,7 +1309,7 @@ const ws = /* @__PURE__ */ O(vs, [["render", _s], ["__file", "/home/harry/Sites/
           }, {
             default: z(() => [
               N(T(os), {
-                class: B({
+                class: I({
                   "flex w-full items-center justify-between gap-3 rounded-md border border-zinc-300 px-3.5 py-2.5 text-left shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300 dark:focus:border-indigo-600 dark:focus:ring-indigo-600": e.appearance === "select",
                   "inline-flex items-center rounded-md border border-transparent border-zinc-300 bg-white px-3.5 py-1.5 text-sm font-semibold text-zinc-700 transition duration-150 ease-in-out hover:bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:border-zinc-500 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700 dark:focus:ring-offset-zinc-800": e.appearance === "primary-button"
                 })
@@ -1333,7 +1333,7 @@ const ws = /* @__PURE__ */ O(vs, [["render", _s], ["__file", "/home/harry/Sites/
               N(Ye, null, {
                 default: z(() => [
                   N(T(is), {
-                    class: B(["min-w-64 origin-top absolute z-50 mt-3 rounded-md border bg-white py-2 shadow-lg dark:border-zinc-700 dark:bg-zinc-800 dark:text-white", {
+                    class: I(["min-w-64 origin-top absolute z-50 mt-3 rounded-md border bg-white py-2 shadow-lg dark:border-zinc-700 dark:bg-zinc-800 dark:text-white", {
                       "right-0": e.align === "right",
                       "left-0": e.align === "left"
                     }])
@@ -1343,7 +1343,7 @@ const ws = /* @__PURE__ */ O(vs, [["render", _s], ["__file", "/home/harry/Sites/
                       (d(!0), y(
                         Y,
                         null,
-                        Ge(e.options, (s) => (d(), R(T(as), {
+                        Ge(e.options, (s) => (d(), B(T(as), {
                           key: s.id,
                           value: s,
                           as: "template"
@@ -1352,7 +1352,7 @@ const ws = /* @__PURE__ */ O(vs, [["render", _s], ["__file", "/home/harry/Sites/
                             p(
                               "li",
                               {
-                                class: B(["flex items-center justify-between gap-2 px-3 py-1 text-sm hover:bg-zinc-100 dark:hover:bg-zinc-700", {
+                                class: I(["flex items-center justify-between gap-2 px-3 py-1 text-sm hover:bg-zinc-100 dark:hover:bg-zinc-700", {
                                   "bg-zinc-50 dark:bg-zinc-900": o,
                                   "bg-zinc-100 dark:bg-zinc-700": r
                                 }])
@@ -1363,7 +1363,7 @@ const ws = /* @__PURE__ */ O(vs, [["render", _s], ["__file", "/home/harry/Sites/
                                   1
                                   /* TEXT */
                                 ),
-                                o ? (d(), R(ps, {
+                                o ? (d(), B(ps, {
                                   key: 0,
                                   class: "h-5 w-5"
                                 })) : A("v-if", !0)
@@ -1577,29 +1577,29 @@ function Fs(e, t, n, s = {}) {
       if (v == null)
         n.removeItem(e);
       else {
-        const I = _.write(v), L = n.getItem(e);
-        L !== I && (n.setItem(e, I), f && f.dispatchEvent(new CustomEvent(dt, {
+        const R = _.write(v), L = n.getItem(e);
+        L !== R && (n.setItem(e, R), f && f.dispatchEvent(new CustomEvent(dt, {
           detail: {
             key: e,
             oldValue: L,
-            newValue: I,
+            newValue: R,
             storageArea: n
           }
         })));
       }
-    } catch (I) {
-      m(I);
+    } catch (R) {
+      m(R);
     }
   }
   function k(v) {
-    const I = v ? v.newValue : n.getItem(e);
-    if (I == null)
+    const R = v ? v.newValue : n.getItem(e);
+    if (R == null)
       return c && $ !== null && n.setItem(e, _.write($)), $;
     if (!v && l) {
-      const L = _.read(I);
+      const L = _.read(R);
       return typeof l == "function" ? l(L, $) : D === "object" && !Array.isArray(L) ? { ...$, ...L } : L;
     } else
-      return typeof I != "string" ? I : _.read(I);
+      return typeof R != "string" ? R : _.read(R);
   }
   function S(v) {
     C(v.detail);
@@ -1614,8 +1614,8 @@ function Fs(e, t, n, s = {}) {
         E();
         try {
           (v == null ? void 0 : v.newValue) !== _.write(w.value) && (w.value = k(v));
-        } catch (I) {
-          m(I);
+        } catch (R) {
+          m(R);
         } finally {
           v ? G(g) : g();
         }
@@ -1680,7 +1680,7 @@ const Gs = /* @__PURE__ */ O(Hs, [["render", Ks], ["__file", "/home/harry/Sites/
     return Ke("sidebarMinimised", t), (n, s) => (d(), y(
       "nav",
       {
-        class: B(["min-h-screen h-full relative bg-white flex flex-col justify-between dark:bg-zinc-800 border-zinc-100 dark:border-zinc-700 transition-all duration-200 rounded-r-2xl z-10", {
+        class: I(["min-h-screen h-full relative bg-white flex flex-col justify-between dark:bg-zinc-800 border-zinc-100 dark:border-zinc-700 transition-all duration-200 rounded-r-2xl z-10", {
           "!w-24 !max-w-24 !min-w-24": T(t),
           "w-64 max-w-64 min-w-64": !T(t)
         }])
@@ -1691,7 +1691,7 @@ const Gs = /* @__PURE__ */ O(Hs, [["render", Ks], ["__file", "/home/harry/Sites/
           onClick: s[0] || (s[0] = (r) => t.value = !T(t))
         }, [
           N(Gs, {
-            class: B(["w-5 h-5", {
+            class: I(["w-5 h-5", {
               "transform rotate-180": !T(t)
             }])
           }, null, 8, ["class"])
@@ -1767,13 +1767,13 @@ const Gs = /* @__PURE__ */ O(Hs, [["render", Ks], ["__file", "/home/harry/Sites/
         "dark:focus:text-zinc-300"
       ), r;
     });
-    return (r, o) => (d(), R(X(e.as), {
-      class: B(s.value)
+    return (r, o) => (d(), B(X(e.as), {
+      class: I(s.value)
     }, {
       default: z(() => [
-        e.icon ? (d(), R(X(e.icon), {
+        e.icon ? (d(), B(X(e.icon), {
           key: 0,
-          class: B(["w-6 h-6 transition-all", {
+          class: I(["w-6 h-6 transition-all", {
             " mr-4": !T(n)
           }])
         }, null, 8, ["class"])) : A("v-if", !0),
@@ -1819,7 +1819,7 @@ function ao(e, t) {
 }
 const Ui = /* @__PURE__ */ O(oo, [["render", ao], ["__file", "/home/harry/Sites/ui/src/components/Sidebar/SidebarItemGroup.vue"]]), lo = {};
 function uo(e, t) {
-  return d(), R(ye, {
+  return d(), B(ye, {
     "enter-active-class": "transition ease-out duration-300",
     "enter-from-class": "transform opacity-0",
     "enter-to-class": "transform opacity-100",
@@ -2141,7 +2141,7 @@ function Bo(e, t, n, s = {}, r) {
       return (pe = (L = Se.get(e, b)) !== null && L !== void 0 ? L : S == null ? void 0 : S.initialValue) !== null && pe !== void 0 ? pe : 0;
     };
     let v = Po(Io(n), C);
-    const I = Kt(v, S);
+    const R = Kt(v, S);
     if (He(h)) {
       const L = h.createAnimation(v, t !== "opacity", C, b, k);
       h = L.easing, v = L.keyframes || v, c = L.duration || c;
@@ -2170,7 +2170,7 @@ function Bo(e, t, n, s = {}, r) {
       }).catch(Rt), D || (a.playbackRate = 1.000001);
     } else if (r && E)
       v = v.map((L) => typeof L == "string" ? parseFloat(L) : L), v.length === 1 && v.unshift(parseFloat(C())), a = new r((L) => {
-        Se.set(e, b, I ? I(L) : L);
+        Se.set(e, b, R ? R(L) : L);
       }, v, Object.assign(Object.assign({}, s), {
         duration: c,
         easing: h
@@ -2395,7 +2395,7 @@ const ri = {
     function n(s, r) {
       me(s, { height: "0px" }, { duration: 0.2 }).finished.then(r);
     }
-    return (s, r) => (d(), R(ye, {
+    return (s, r) => (d(), B(ye, {
       "enter-active-class": "overflow-hidden transition-all duration-300",
       "enter-from-class": "scale-95 opacity-0",
       "enter-to-class": "scale-100 opacity-100",
@@ -2427,8 +2427,8 @@ const ri = {
           Y,
           null,
           [
-            (d(), R(X(r), {
-              class: B({
+            (d(), B(X(r), {
+              class: I({
                 "dark:text-zinc-200 text-zinc-700": o === t.value.length - 1
               })
             }, null, 8, ["class"])),
@@ -2451,7 +2451,7 @@ const ri = {
     }
   },
   setup(e) {
-    return (t, n) => (d(), R(X(e.as), { class: "rounded-full px-1.5 transition hover:bg-zinc-900/10 hover:dark:bg-white/10 cursor-pointer text-sm text-zinc-400" }, {
+    return (t, n) => (d(), B(X(e.as), { class: "rounded-full px-1.5 transition hover:bg-zinc-900/10 hover:dark:bg-white/10 cursor-pointer text-sm text-zinc-400" }, {
       default: z(() => [
         x(t.$slots, "default")
       ]),
@@ -2548,7 +2548,7 @@ const re = te({
                     })
                   ]),
                   footer: z(() => [
-                    T(q).type === "info" ? (d(), R(rt, {
+                    T(q).type === "info" ? (d(), B(rt, {
                       key: 0,
                       onClick: n[1] || (n[1] = (s) => {
                         var r;
@@ -2676,7 +2676,7 @@ const V = te({
   key: "modalBackground",
   class: "fixed inset-0 bg-black/40",
   "aria-hidden": "true"
-}, wi = { class: "flex min-h-screen w-full max-w-xl justify-center items-end sm:items-center" }, xi = { class: "absolute right-0 top-0 pr-4 pt-4" }, $i = /* @__PURE__ */ p(
+}, wi = { class: "flex min-h-screen w-screen justify-center items-end sm:items-center" }, xi = { class: "absolute right-0 top-0 pr-4 pt-4" }, $i = /* @__PURE__ */ p(
   "span",
   { class: "sr-only" },
   "Close",
@@ -2719,7 +2719,7 @@ const V = te({
       p(
         "div",
         {
-          class: B(["fixed inset-0 z-[58] flex max-w-full justify-center overflow-y-auto", T(V).all.length ? "" : "pointer-events-none"]),
+          class: I(["fixed inset-0 z-[58] flex max-w-full justify-center overflow-y-auto", T(V).all.length ? "" : "pointer-events-none"]),
           "aria-labelledby": "modal-title",
           role: "dialog",
           "aria-modal": "true"
@@ -2738,26 +2738,37 @@ const V = te({
                 (d(!0), y(
                   Y,
                   null,
-                  Ge(T(V).all, (r, o) => (d(), y("div", {
-                    key: `modal${o}`,
-                    class: "relative w-full rounded-lg bg-white p-4 shadow-xl transition-all dark:bg-zinc-900 dark:text-white sm:my-8 sm:p-6"
-                  }, [
-                    p("div", xi, [
-                      p("button", {
-                        type: "button",
-                        class: "rounded-md text-zinc-400 hover:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2",
-                        onClick: s[0] || (s[0] = (i) => T(V).pop())
-                      }, [
-                        $i,
-                        A(" Heroicon name: outline/x "),
-                        Si
-                      ])
-                    ]),
-                    (d(), R(X(r.component), {
-                      "modal-index": o,
-                      data: r.data
-                    }, null, 8, ["modal-index", "data"]))
-                  ]))),
+                  Ge(T(V).all, (r, o) => (d(), y(
+                    "div",
+                    {
+                      key: `modal${o}`,
+                      class: I(["relative w-full rounded-lg bg-white p-4 shadow-xl transition-all dark:bg-zinc-900 dark:text-white sm:my-8 sm:p-6", {
+                        "max-w-6xl": r.data.size = "huge",
+                        "max-w-3xl": r.data.size = "large",
+                        "max-w-xl": r.data.size = "medium",
+                        "max-w-md": r.data.size = "small"
+                      }])
+                    },
+                    [
+                      p("div", xi, [
+                        p("button", {
+                          type: "button",
+                          class: "rounded-md text-zinc-400 hover:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2",
+                          onClick: s[0] || (s[0] = (i) => T(V).pop())
+                        }, [
+                          $i,
+                          A(" Heroicon name: outline/x "),
+                          Si
+                        ])
+                      ]),
+                      (d(), B(X(r.component), {
+                        "modal-index": o,
+                        data: r.data
+                      }, null, 8, ["modal-index", "data"]))
+                    ],
+                    2
+                    /* CLASS */
+                  ))),
                   128
                   /* KEYED_FRAGMENT */
                 ))
@@ -2781,7 +2792,7 @@ const V = te({
     return (t, n) => (d(), y(
       "div",
       {
-        class: B(["mx-auto px-4 sm:px-6 lg:px-8", {
+        class: I(["mx-auto px-4 sm:px-6 lg:px-8", {
           "max-w-7xl": !e.narrow,
           "max-w-4xl": e.narrow
         }])
