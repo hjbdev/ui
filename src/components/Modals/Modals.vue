@@ -24,10 +24,10 @@
                         :key="`modal${modalIndex}`"
                         class="relative w-full rounded-lg bg-white p-4 shadow-xl transition-all dark:bg-zinc-900 dark:text-white sm:my-8 sm:p-6"
                         :class="{
-                            'max-w-6xl': modal.data.size = 'huge',
-                            'max-w-3xl': modal.data.size = 'large',
-                            'max-w-xl': modal.data.size = 'medium',
-                            'max-w-md': modal.data.size = 'small',
+                            'max-w-6xl': modal.data.size === 'huge',
+                            'max-w-3xl': modal.data.size === 'large',
+                            'max-w-xl': modal.data.size === 'medium' || !modal.data.size,
+                            'max-w-md': modal.data.size === 'small',
                         }"
                     >
                         <div

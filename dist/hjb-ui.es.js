@@ -2743,10 +2743,10 @@ const V = te({
                     {
                       key: `modal${o}`,
                       class: I(["relative w-full rounded-lg bg-white p-4 shadow-xl transition-all dark:bg-zinc-900 dark:text-white sm:my-8 sm:p-6", {
-                        "max-w-6xl": r.data.size = "huge",
-                        "max-w-3xl": r.data.size = "large",
-                        "max-w-xl": r.data.size = "medium",
-                        "max-w-md": r.data.size = "small"
+                        "max-w-6xl": r.data.size === "huge",
+                        "max-w-3xl": r.data.size === "large",
+                        "max-w-xl": r.data.size === "medium" || !r.data.size,
+                        "max-w-md": r.data.size === "small"
                       }])
                     },
                     [
