@@ -1,7 +1,7 @@
 <template>
     <div>
         <div
-            class="fixed inset-0 z-50 flex max-w-full justify-center overflow-y-auto"
+            class="fixed inset-0 z-[58] flex max-w-full justify-center overflow-y-auto"
             :class="modals.all.length ? '' : 'pointer-events-none'"
             aria-labelledby="modal-title"
             role="dialog"
