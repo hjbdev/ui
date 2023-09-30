@@ -1832,7 +1832,7 @@ const Xt = /* @__PURE__ */ L(La, [["render", Ba], ["__file", "/home/harry/Sites/
             default: P(() => [
               q(E(ma), {
                 class: "flex w-full items-center justify-between gap-3 rounded-md border border-zinc-300 px-3.5 py-2 text-left text-sm shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300 dark:focus:border-indigo-600 dark:focus:ring-indigo-600",
-                onChange: o[0] || (o[0] = (a) => t.emit("update:query", a.target.value))
+                onChange: o[0] || (o[0] = (a) => t.$emit("update:query", a.target.value))
               }, {
                 default: P(() => {
                   var a, n;
