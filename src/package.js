@@ -22,6 +22,7 @@ export { default as HH3 } from "./components/Headings/HH3.vue";
 export { default as Input } from "./components/Inputs/Input.vue";
 export { default as InputLayout } from "./components/Inputs/InputLayout.vue";
 export { default as SelectInput } from "./components/Inputs/SelectInput.vue";
+export { default as AutocompleteInput } from "./components/Inputs/AutocompleteInput.vue";
 
 export { default as Sidebar } from "./components/Sidebar/Sidebar.vue";
 export { default as SidebarItem } from "./components/Sidebar/SidebarItem.vue";

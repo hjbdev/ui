@@ -18,6 +18,7 @@ import SidebarItem from "./components/Sidebar/SidebarItem.vue";
 import HomeIcon from "./components/Icons/HomeIcon.vue";
 import SidebarItemGroup from "./components/Sidebar/SidebarItemGroup.vue";
 import SelectInput from "./components/Inputs/SelectInput.vue";
+import AutocompleteInput from "./components/Inputs/AutocompleteInput.vue";
 import { ref } from "vue";
 import HH1 from "./components/Headings/HH1.vue";
 import HH2 from "./components/Headings/HH2.vue";
@@ -61,9 +62,9 @@ useIntervalFn(() => {
         <Dialogs />
 
         <Container class="grid gap-6 pt-6">
-            <div ref="resizeTest" class="bg-red-200" v-auto-resize>
+            <!-- <div ref="resizeTest" class="bg-red-200" v-auto-resize>
                 <div v-if="resizeInnerVisible" class="h-48 bg-red"></div>
-            </div>
+            </div> -->
 
             <PrimaryButton @click="collapseOpen = !collapseOpen">
                 {{ collapseOpen ? "Close" : "Open" }}
@@ -132,6 +133,7 @@ useIntervalFn(() => {
                         },
                     ]"
                 />
+                <AutocompleteInput></AutocompleteInput>
             </Card>
             <Card>
                 <template #header>
