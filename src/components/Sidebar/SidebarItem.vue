@@ -5,7 +5,7 @@ const minimised = inject('sidebarMinimised');
 
 const props = defineProps({
     as: {
-        type: [Object, String],
+        type: [Object, String, Function],
         default: "a",
     },
     active: {

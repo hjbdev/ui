@@ -2238,7 +2238,7 @@ const hi = /* @__PURE__ */ L(di, [["render", mi], ["__file", "/home/harry/Sites/
   __name: "SidebarItem",
   props: {
     as: {
-      type: [Object, String],
+      type: [Object, String, Function],
       default: "a"
     },
     active: {
