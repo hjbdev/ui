@@ -12,7 +12,7 @@ const props = defineProps({
         type: Boolean,
     },
     icon: {
-        type: Object,
+        type: [Object, Function],
     },
 });
 

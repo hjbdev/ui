@@ -2245,7 +2245,7 @@ const hi = /* @__PURE__ */ L(di, [["render", mi], ["__file", "/home/harry/Sites/
       type: Boolean
     },
     icon: {
-      type: Object
+      type: [Object, Function]
     }
   },
   setup(e) {
