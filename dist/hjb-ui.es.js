@@ -2321,7 +2321,7 @@ const hi = /* @__PURE__ */ L(di, [["render", mi], ["__file", "/home/harry/Sites/
       /* FORWARDED */
     }, 8, ["class"]));
   }
-}, cs = /* @__PURE__ */ L(wi, [["__file", "/home/harry/Sites/ui/src/components/Sidebar/SidebarItem.vue"]]), _i = {}, Si = { class: "min-h-screen bg-zinc-100 dark:bg-zinc-900 relative" }, $i = { class: "flex w-full h-full max-h-screen z-10 relative" }, Oi = { class: "flex-grow overflow-y-auto pb-12" };
+}, cs = /* @__PURE__ */ L(wi, [["__file", "/home/harry/Sites/ui/src/components/Sidebar/SidebarItem.vue"]]), _i = {}, Si = { class: "min-h-screen bg-zinc-100 dark:bg-zinc-900 relative" }, $i = { class: "flex w-full h-full max-h-screen z-10 relative" }, Oi = { class: "flex-grow overflow-y-auto pb-12 z-10" };
 function ki(e, t) {
   return h(), T("div", Si, [
     R(e.$slots, "top"),
