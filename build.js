@@ -1,14 +1,7 @@
-const { defineConfig, build } = require("vite");
+const { build } = require("vite");
 // const { babel } = require('@rollup/plugin-babel');
-const path = require("path");
-const fs = require("fs");
+const dts = require("vite-plugin-dts");
 const vue = require("@vitejs/plugin-vue");
-
-const log = (message) => {
-    console.log("-".repeat(process.stdout.columns - 1));
-    console.log(" ".repeat(process.stdout.columns / 2 - message.length / 2) + message);
-    console.log("-".repeat(process.stdout.columns - 1));
-};
 
 const runBuild = async () => {
     await build({
@@ -33,7 +26,7 @@ const runBuild = async () => {
                 },
             },
         },
-        plugins: [vue() /*, babel({ babelHelpers: "bundled" }) */],
+        plugins: [vue(), dts({ rollupTypes: true }) /*, babel({ babelHelpers: "bundled" }) */],
     });
 };
 
