@@ -17,6 +17,7 @@ const runBuild = async () => {
             lib: {
                 entry: './src/package.js',
                 name: "hjb-ui",
+                formats: ['es'],
             },
             rollupOptions: {
                 external: [
