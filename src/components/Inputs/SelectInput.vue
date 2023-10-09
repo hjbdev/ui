@@ -34,7 +34,7 @@
             </ListboxButton>
             <FadeScaleTransition>
                 <ListboxOptions
-                    class="min-w-64 origin-top absolute z-50 mt-3 rounded-md border bg-white py-2 shadow-lg dark:border-zinc-700 dark:bg-zinc-800 dark:text-white"
+                    class="overflow-y-auto max-h-64 min-w-64 origin-top absolute z-50 mt-3 rounded-md border bg-white py-2 shadow-lg dark:border-zinc-700 dark:bg-zinc-800 dark:text-white"
                     :class="{
                         'right-0': align === 'right',
                         'left-0': align === 'left',

@@ -1726,7 +1726,7 @@ const Xt = /* @__PURE__ */ L(La, [["render", Ba], ["__file", "/home/harry/Sites/
               q(He, null, {
                 default: P(() => [
                   q(E(Ta), {
-                    class: K(["min-w-64 origin-top absolute z-50 mt-3 rounded-md border bg-white py-2 shadow-lg dark:border-zinc-700 dark:bg-zinc-800 dark:text-white", {
+                    class: K(["overflow-y-auto max-h-64 min-w-64 origin-top absolute z-50 mt-3 rounded-md border bg-white py-2 shadow-lg dark:border-zinc-700 dark:bg-zinc-800 dark:text-white", {
                       "right-0": e.align === "right",
                       "left-0": e.align === "left"
                     }])
