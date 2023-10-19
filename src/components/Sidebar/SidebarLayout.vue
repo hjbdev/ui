@@ -4,7 +4,7 @@
         <div class="flex w-full h-full max-h-screen z-10 relative">
             <slot name="sidebar" />
 
-            <section class="flex-grow overflow-y-auto pb-12 z-10">
+            <section class="flex-grow overflow-y-auto pb-12 z-[11]">
                 <slot />
             </section>
         </div>
