@@ -16,7 +16,7 @@ provide('sidebarMinimised', sidebarMinimised);
         }"
     >
         <button
-            class="absolute top-1/2 -translate-y-1/2 left-full bg-white dark:bg-zinc-900 dark:text-white rounded-full -translate-x-1/2 flex items-center justify-center w-8 h-8 border dark:border-zinc-700 z-10"
+            class="absolute top-1/2 -translate-y-1/2 left-full bg-white dark:bg-zinc-900 dark:text-white rounded-full -translate-x-1/2 flex items-center justify-center w-8 h-8 border dark:border-zinc-700 z-[12]"
             @click="sidebarMinimised = !sidebarMinimised"
         >
             <ChevronRightIcon class="w-5 h-5" :class="{
