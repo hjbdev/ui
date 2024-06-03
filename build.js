@@ -1,7 +1,6 @@
-const { build } = require("vite");
-// const { babel } = require('@rollup/plugin-babel');
-const dts = require("vite-plugin-dts");
-const vue = require("@vitejs/plugin-vue");
+import { build } from 'vite';
+import dts from 'vite-plugin-dts';
+import vue from '@vitejs/plugin-vue';
 
 const runBuild = async () => {
     await build({
